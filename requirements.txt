@@ -1,0 +1,31 @@
+# =====================================================================
+# Capstone: DRAG / BR-DRAG reproduction (Python 3.10 - 3.12, 3.11 recommended)
+# Install with:  pip install -r requirements.txt
+# =====================================================================
+
+# --- PyTorch (paper uses 2.5.1) --------------------------------------
+# Extra index serves the CUDA 12.1 Windows wheels. "torch==2.5.1" matches
+# the "2.5.1+cu121" build, which pip prefers over the CPU-only PyPI build.
+# This build also runs fine on machines without an NVIDIA GPU (CPU fallback).
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+torchvision==0.20.1
+
+# --- Core numerics ---------------------------------------------------
+numpy==1.26.4
+scipy==1.13.1            # statistics, helpers for geometric median checks
+pandas==2.2.3            # results tables
+
+# --- Plotting / logging / configs ------------------------------------
+matplotlib==3.9.2
+tqdm==4.66.5
+pyyaml==6.0.2            # experiment config files
+tensorboard==2.18.0      # optional live training curves
+
+# --- Root-dataset vetting for BR-DRAG (confident learning, paper ref [39])
+cleanlab==2.7.0
+scikit-learn==1.5.2
+
+# --- Dev / testing ---------------------------------------------------
+pytest==8.3.3
+jupyter==1.1.1

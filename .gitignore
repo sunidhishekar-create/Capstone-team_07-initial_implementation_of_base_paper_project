@@ -1,0 +1,39 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache / build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Datasets (large, auto-downloaded by the code)
+data/
+*.npz
+*.pkl
+
+# Model checkpoints and heavy outputs
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+runs/
+results/**/*.npy
+
+# Small result summaries (csv / json / png) stay tracked on purpose
+
+# Editor / OS
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets / personal config
+.env
+*.local.yaml
